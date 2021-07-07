@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ShopController;
+use App\Http\Controllers\FeaturesController;
+use App\Http\Controllers\BlogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +19,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
+
+Route::get('/shop/', [ShopController::class, 'showProducts']);
+
+Route::get('/features/', [FeaturesController::class, 'showShopingCart']);
+
+Route::get('/blog/', [BlogController::class, 'showBlog']);
