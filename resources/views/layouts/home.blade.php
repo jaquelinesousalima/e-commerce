@@ -103,7 +103,7 @@
 							</li>
 
 							<li>
-								<a href="about.html">About</a>
+								<a href="/e-commerce/public/about/">About</a>
 							</li>
 
 							<li>
@@ -219,7 +219,7 @@
 				</li>
 
 				<li>
-					<a href="about.html">About</a>
+					<a href="/e-commerce/public/about/">About</a>
 				</li>
 
 				<li>
@@ -429,7 +429,8 @@
 						Newsletter
 					</h4>
 
-					<form>
+					<form action="/e-commerce/public/newsletter/" method="POST"> 
+					@csrf
 						<div class="wrap-input1 w-full p-b-4">
 							<input class="input1 bg-none plh1 stext-107 cl7" type="text" name="email" placeholder="email@example.com">
 							<div class="focus-input1 trans-04"></div>
