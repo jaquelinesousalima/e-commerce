@@ -22,14 +22,14 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/shop/', [ShopController::class, 'showProducts']);
+Route::get('/shop', [ShopController::class, 'showProducts']);
 
-Route::get('/features/', [FeaturesController::class, 'showShopingCart']);
+Route::get('/features', [FeaturesController::class, 'showShopingCart']);
 
-Route::get('/blog/', [BlogController::class, 'showBlog']);
+Route::get('/blog', [BlogController::class, 'showBlog']);
 
-Route::get('/about/', [AboutController::class, 'showAbout']);
+Route::get('/about', [AboutController::class, 'showAbout']);
 
-Route::post('/newsletter/', [NewsletterController::class, 'addNewsletter']);
+Route::post('/newsletter', [NewsletterController::class, 'addNewsletter']);
 
 
