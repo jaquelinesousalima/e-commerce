@@ -16,7 +16,7 @@ class CreateNewsletterTable extends Migration
         Schema::create('newsletter', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('email',100);
+            $table->string('email',100)->unique();
             $table->string('optout',1)->nullable();
         });
     }

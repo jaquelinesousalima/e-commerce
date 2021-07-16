@@ -6,6 +6,7 @@ use App\Http\Controllers\FeaturesController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\NewsletterController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,4 +33,5 @@ Route::get('/about', [AboutController::class, 'showAbout']);
 
 Route::post('/newsletter', [NewsletterController::class, 'addNewsletter']);
 
+Route::get('/contact', [ContactController::class, 'showContact']);
 
