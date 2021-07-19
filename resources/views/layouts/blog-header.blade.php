@@ -101,7 +101,7 @@
 							</li>
 
 							<li>
-								<a href="contact.html">Contact</a>
+								<a href="/e-commerce/public/contact/">Contact</a>
 							</li>
 						</ul>
 					</div>	
@@ -217,7 +217,7 @@
 				</li>
 
 				<li>
-					<a href="contact.html">Contact</a>
+					<a href="/e-commerce/public/contact/">Contact</a>
 				</li>
 			</ul>
 		</div>
