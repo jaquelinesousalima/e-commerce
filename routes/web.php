@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ShopController;
-use App\Http\Controllers\FeaturesController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\NewsletterController;
@@ -25,8 +24,6 @@ Route::get('/', function () {
 });
 
 Route::get('/shop', [ShopController::class, 'showProducts']);
-
-Route::get('/features', [FeaturesController::class, 'showShopingCart']);
 
 Route::get('/blog', [BlogController::class, 'showBlog']);
 

@@ -5,28 +5,28 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
-	<link rel="icon" type="image/png" href="./resources/images/icons/favicon.png"/>
+	<link rel="icon" type="image/png" href="/e-commerce/resources/images/icons/favicon.png"/>
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="./resources/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/e-commerce/resources/vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="./resources/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="/e-commerce/resources/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="./resources/fonts/iconic/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" type="text/css" href="/e-commerce/resources/fonts/iconic/css/material-design-iconic-font.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="./resources/fonts/linearicons-v1.0.0/icon-font.min.css">
+	<link rel="stylesheet" type="text/css" href="/e-commerce/resources/fonts/linearicons-v1.0.0/icon-font.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="./resources/vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="/e-commerce/resources/vendor/animate/animate.css">
 <!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="./resources/vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="/e-commerce/resources/vendor/css-hamburgers/hamburgers.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="./resources/vendor/animsition/css/animsition.min.css">
+	<link rel="stylesheet" type="text/css" href="/e-commerce/resources/vendor/animsition/css/animsition.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="./resources/vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="/e-commerce/resources/vendor/select2/select2.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="./resources/vendor/perfect-scrollbar/perfect-scrollbar.css">
+	<link rel="stylesheet" type="text/css" href="/e-commerce/resources/vendor/perfect-scrollbar/perfect-scrollbar.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="./resources/css/util.css">
-	<link rel="stylesheet" type="text/css" href="./resources/css/main.css">
+	<link rel="stylesheet" type="text/css" href="/e-commerce/resources/css/util.css">
+	<link rel="stylesheet" type="text/css" href="/e-commerce/resources/css/main.css">
 <!--===============================================================================================-->
 </head>
 <body class="animsition">
@@ -67,7 +67,7 @@
 					
 					<!-- Logo desktop -->		
 					<a href="#" class="logo">
-						<img src="./resources/images/icons/logo-01.png" alt="IMG-LOGO">
+						<img src="/e-commerce/resources/images/icons/logo-01.png" alt="IMG-LOGO">
 					</a>
 
 					<!-- Menu desktop -->
@@ -128,7 +128,7 @@
 		<div class="wrap-header-mobile">
 			<!-- Logo moblie -->		
 			<div class="logo-mobile">
-				<a href="./"><img src="./resources/images/icons/logo-01.png" alt="IMG-LOGO"></a>
+				<a href="./"><img src="/e-commerce/resources/images/icons/logo-01.png" alt="IMG-LOGO"></a>
 			</div>
 
 			<!-- Icon header -->
@@ -226,7 +226,7 @@
 		<div class="modal-search-header flex-c-m trans-04 js-hide-modal-search">
 			<div class="container-search-header">
 				<button class="flex-c-m btn-hide-modal-search trans-04 js-hide-modal-search">
-					<img src="./resources/images/icons/icon-close2.png" alt="CLOSE">
+					<img src="/e-commerce/resources/images/icons/icon-close2.png" alt="CLOSE">
 				</button>
 
 				<form class="wrap-search-header flex-w p-l-15">
@@ -258,7 +258,7 @@
 				<ul class="header-cart-wrapitem w-full">
 					<li class="header-cart-item flex-w flex-t m-b-12">
 						<div class="header-cart-item-img">
-							<img src="images/item-cart-01.jpg" alt="IMG">
+							<img src="/e-commerce/resources/images/item-cart-01.jpg" alt="IMG">
 						</div>
 
 						<div class="header-cart-item-txt p-t-8">
@@ -274,7 +274,7 @@
 
 					<li class="header-cart-item flex-w flex-t m-b-12">
 						<div class="header-cart-item-img">
-							<img src="./resources/images/item-cart-02.jpg" alt="IMG">
+							<img src="/e-commerce/resources/images/item-cart-02.jpg" alt="IMG">
 						</div>
 
 						<div class="header-cart-item-txt p-t-8">
@@ -290,7 +290,7 @@
 
 					<li class="header-cart-item flex-w flex-t m-b-12">
 						<div class="header-cart-item-img">
-							<img src="./resources/images/item-cart-03.jpg" alt="IMG">
+							<img src="/e-commerce/resources/images/item-cart-03.jpg" alt="IMG">
 						</div>
 
 						<div class="header-cart-item-txt p-t-8">
@@ -426,7 +426,7 @@
 					<form action="./newsletter" method="POST">
 					@csrf
 						<div class="wrap-input1 w-full p-b-4">
-							<input class="input1 bg-none plh1 stext-107 cl7" type="text" name="email" placeholder="email@example.com">
+							<input class="input1 bg-none plh1 stext-107 cl7" type="text" name="email" placeholder="email@example.com" required>
 							<div class="focus-input1 trans-04"></div>
 						</div>
 
@@ -442,23 +442,23 @@
 			<div class="p-t-40">
 				<div class="flex-c-m flex-w p-b-18">
 					<a href="#" class="m-all-1">
-						<img src="./resources/images/icons/icon-pay-01.png" alt="ICON-PAY">
+						<img src="/e-commerce/resources/images/icons/icon-pay-01.png" alt="ICON-PAY">
 					</a>
 
 					<a href="#" class="m-all-1">
-						<img src="./resources/images/icons/icon-pay-02.png" alt="ICON-PAY">
+						<img src="/e-commerce/resources/images/icons/icon-pay-02.png" alt="ICON-PAY">
 					</a>
 
 					<a href="#" class="m-all-1">
-						<img src="./resources/images/icons/icon-pay-03.png" alt="ICON-PAY">
+						<img src="/e-commerce/resources/images/icons/icon-pay-03.png" alt="ICON-PAY">
 					</a>
 
 					<a href="#" class="m-all-1">
-						<img src="./resources/images/icons/icon-pay-04.png" alt="ICON-PAY">
+						<img src="/e-commerce/resources/images/icons/icon-pay-04.png" alt="ICON-PAY">
 					</a>
 
 					<a href="#" class="m-all-1">
-						<img src="./resources/images/icons/icon-pay-05.png" alt="ICON-PAY">
+						<img src="/e-commerce/resources/images/icons/icon-pay-05.png" alt="ICON-PAY">
 					</a>
 				</div>
 
@@ -481,14 +481,14 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	</div>
 
 <!--===============================================================================================-->	
-	<script src="./resources/vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script src="/e-commerce/resources/vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
-	<script src="./resources/vendor/animsition/js/animsition.min.js"></script>
+	<script src="/e-commerce/resources/vendor/animsition/js/animsition.min.js"></script>
 <!--===============================================================================================-->
-	<script src="./resources/vendor/bootstrap/js/popper.js"></script>
-	<script src="./resources/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="/e-commerce/resources/vendor/bootstrap/js/popper.js"></script>
+	<script src="/e-commerce/resources/vendor/bootstrap/js/bootstrap.min.js"></script>
 <!--===============================================================================================-->
-	<script src="./resources/vendor/select2/select2.min.js"></script>
+	<script src="/e-commerce/resources/vendor/select2/select2.min.js"></script>
 	<script>
 		$(".js-select2").each(function(){
 			$(this).select2({
@@ -498,9 +498,9 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 		})
 	</script>
 <!--===============================================================================================-->
-	<script src="./resources/vendor/MagnificPopup/jquery.magnific-popup.min.js"></script>
+	<script src="/e-commerce/resources/vendor/MagnificPopup/jquery.magnific-popup.min.js"></script>
 <!--===============================================================================================-->
-	<script src="./resources/vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+	<script src="/e-commerce/resources/vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
 	<script>
 		$('.js-pscroll').each(function(){
 			$(this).css('position','relative');
@@ -518,9 +518,9 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	</script>
 <!--===============================================================================================-->
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKFWBqlKAGCeS1rMVoaNlwyayu0e0YRes"></script>
-	<script src="./resources/js/map-custom.js"></script>
+	<script src="/e-commerce/resources/js/map-custom.js"></script>
 <!--===============================================================================================-->
-	<script src="./resources/js/main.js"></script>
+	<script src="/e-commerce/resources/js/main.js"></script>
 
 </body>
 </html>
