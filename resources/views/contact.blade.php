@@ -5,7 +5,7 @@
 @section('content')
 
     <!-- Title page -->
-    <section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('/e-commerce/resources/images/bg-01.jpg');">
+    <section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('./resources/images/bg-01.jpg');">
 		<h2 class="ltext-105 cl0 txt-center">
 			Contact
 		</h2>
@@ -17,7 +17,7 @@
 		<div class="container">
 			<div class="flex-w flex-tr">
 				<div class="size-210 bor10 p-lr-70 p-t-55 p-b-70 p-lr-15-lg w-full-md">
-					<form action="/e-commerce/public/contact-message" method="POST">
+					<form action="./contact-message" method="POST">
 					@csrf
 						<h4 class="mtext-105 cl2 txt-center p-b-30">
 							Send Us A Message
@@ -25,7 +25,7 @@
 
 						<div class="bor8 m-b-20 how-pos4-parent">
 							<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" name="email" placeholder="Your Email Address">
-							<img class="how-pos4 pointer-none" src="/e-commerce/resources/images/icons/icon-email.png" alt="ICON">
+							<img class="how-pos4 pointer-none" src="./resources/images/icons/icon-email.png" alt="ICON">
 						</div>
 
 						<div class="bor8 m-b-30">
@@ -94,7 +94,7 @@
 	
 	<!-- Map -->
 	<div class="map">
-		<div class="size-303" id="google_map" data-map-x="40.840203" data-map-y="-8.481525" data-pin="/e-commerce/resources/images/icons/pin.png" data-scrollwhell="0" data-draggable="1" data-zoom="11"></div>
+		<div class="size-303" id="google_map" data-map-x="40.840203" data-map-y="-8.481525" data-pin="./resources/images/icons/pin.png" data-scrollwhell="0" data-draggable="1" data-zoom="11"></div>
 	</div>
 
 @endsection
