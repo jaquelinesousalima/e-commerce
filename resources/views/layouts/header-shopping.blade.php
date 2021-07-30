@@ -66,7 +66,7 @@
 				<nav class="limiter-menu-desktop container">
 					
 					<!-- Logo desktop -->		
-					<a href="#" class="logo">
+					<a href="./" class="logo">
 						<img src="/e-commerce/resources/images/icons/logo-01.png" alt="IMG-LOGO">
 					</a>
 
@@ -88,8 +88,8 @@
 								<a href="./shop">Shop</a>
 							</li>
 
-							<!--<li class="label1" data-label1="hot">
-								<a href="./features">Features</a>
+							<!--<li class="label1 active-menu" data-label1="hot">
+								<a href="#">Features</a>
 							</li>-->
 
 							<li>
@@ -100,8 +100,8 @@
 								<a href="./about">About</a>
 							</li>
 
-							<li class="active-menu">
-								<a href="#">Contact</a>
+							<li>
+								<a href="./contact">Contact</a>
 							</li>
 						</ul>
 					</div>	
@@ -205,7 +205,7 @@
 				</li>
 
 				<!--<li>
-					<a href="./features" class="label1 rs1" data-label1="hot">Features</a>
+					<a href="#" class="label1 rs1" data-label1="hot">Features</a>
 				</li>-->
 
 				<li>
@@ -217,7 +217,7 @@
 				</li>
 
 				<li>
-					<a href="#">Contact</a>
+					<a href="./contact">Contact</a>
 				</li>
 			</ul>
 		</div>
@@ -226,7 +226,7 @@
 		<div class="modal-search-header flex-c-m trans-04 js-hide-modal-search">
 			<div class="container-search-header">
 				<button class="flex-c-m btn-hide-modal-search trans-04 js-hide-modal-search">
-					<img src="/e-commerce/resources/images/icons/icon-close2.png" alt="CLOSE">
+					<img src="images/icons/icon-close2.png" alt="CLOSE">
 				</button>
 
 				<form class="wrap-search-header flex-w p-l-15">
@@ -426,7 +426,7 @@
 					<form action="./newsletter" method="POST">
 					@csrf
 						<div class="wrap-input1 w-full p-b-4">
-							<input class="input1 bg-none plh1 stext-107 cl7" type="text" name="email" placeholder="email@example.com" required>
+							<input class="input1 bg-none plh1 stext-107 cl7" type="text" name="email" placeholder="email@example.com">
 							<div class="focus-input1 trans-04"></div>
 						</div>
 
@@ -510,15 +510,11 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 				scrollingThreshold: 1000,
 				wheelPropagation: false,
 			});
-
 			$(window).on('resize', function(){
 				ps.update();
 			})
 		});
 	</script>
-<!--===============================================================================================-->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKFWBqlKAGCeS1rMVoaNlwyayu0e0YRes"></script>
-	<script src="/e-commerce/resources/js/map-custom.js"></script>
 <!--===============================================================================================-->
 	<script src="/e-commerce/resources/js/main.js"></script>
 

@@ -88,9 +88,9 @@
 								<a href="./shop">Shop</a>
 							</li>
 
-							<li class="label1" data-label1="hot">
+							<!--<li class="label1" data-label1="hot">
 								<a href="./features">Features</a>
-							</li>
+							</li>-->
 
 							<li class="active-menu">
 								<a href="#">Blog</a>
@@ -204,9 +204,9 @@
 					<a href="./shop">Shop</a>
 				</li>
 
-				<li>
+				<!--<li>
 					<a href="./features" class="label1 rs1" data-label1="hot">Features</a>
-				</li>
+				</li>-->
 
 				<li>
 					<a href="#">Blog</a>
@@ -311,11 +311,11 @@
 					</div>
 
 					<div class="header-cart-buttons flex-w w-full">
-						<a href="shoping-cart.html" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
+						<a href="./shopping" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
 							View Cart
 						</a>
 
-						<a href="shoping-cart.html" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
+						<a href="./shopping" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
 							Check Out
 						</a>
 					</div>
