@@ -1,93 +1,137 @@
 @extends('layouts.blog-header')
 
-@section('title', 'Blog')
+@section('title','Blog Detail')
 
 @section('content')
 
-    <!-- Title page -->
-	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('/e-commerce/resources/images/bg-02.jpg');">
-		<h2 class="ltext-105 cl0 txt-center">
-			Blog
-		</h2>
-	</section>	
+<!-- breadcrumb -->
+    <div class="container">
+		<div class="bread-crumb flex-w p-l-25 p-r-15 p-t-30 p-lr-0-lg">
+			<a href="../" class="stext-109 cl8 hov-cl1 trans-04">
+				Home
+				<i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
+			</a>
+
+			<a href="../blog" class="stext-109 cl8 hov-cl1 trans-04">
+				Blog
+				<i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
+			</a>
+
+			<span class="stext-109 cl4">
+				{{$post->title}}
+			</span>
+		</div>
+	</div>
 
 
 	<!-- Content page -->
-	<section class="bg0 p-t-62 p-b-60">
+	<section class="bg0 p-t-52 p-b-20">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-lg-9 p-b-80">
 					<div class="p-r-45 p-r-0-lg">
-						
-						@foreach($posts as $post)
+						<!--  -->
+						<div class="wrap-pic-w how-pos5-parent">
+							<img src="/e-commerce/resources/images/{{$post->name_image}}" alt="IMG-BLOG">
 
-							<!-- item blog -->
-							<div class="p-b-63">
-								<a href="blog-detail.html" class="hov-img0 how-pos5-parent">
-									<img src="/e-commerce/resources/images/{{$post->name_image}}" alt="IMG-BLOG">
+							<div class="flex-col-c-m size-123 bg9 how-pos5">
+								<span class="ltext-107 cl2 txt-center">
+									@php
+                                        echo date('d', strtotime($post->publication_date));
+                                    @endphp    
+								</span>
 
-									<div class="flex-col-c-m size-123 bg9 how-pos5">
-										<span class="ltext-107 cl2 txt-center">
-											@php
-												echo date('d',strtotime($post->publication_date));
-											@endphp
-										</span>
-
-										<span class="stext-109 cl3 txt-center">
-											@php
-												echo date('M Y',strtotime($post->publication_date));
-											@endphp
-										</span>
-									</div>
-								</a>
-
-								<div class="p-t-32">
-									<h4 class="p-b-15">
-										<a href="./blog-detail/{{$post->id}}" class="ltext-108 cl2 hov-cl1 trans-04">
-											{{$post->title}}
-										</a>
-									</h4>
-
-									<p class="stext-117 cl6">
-										{{$post->resume}}
-									</p>
-
-									<div class="flex-w flex-sb-m p-t-18">
-										<span class="flex-w flex-m stext-111 cl2 p-r-30 m-tb-10">
-											<span>
-												<span class="cl4">By</span> {{$post->author}}  
-												<span class="cl12 m-l-4 m-r-6">|</span>
-											</span>
-
-											<span>
-												{{$post->tags}}  
-												<span class="cl12 m-l-4 m-r-6">|</span>
-											</span>
-
-											<span>
-												8 Comments
-											</span>
-										</span>
-
-										<a href="./blog-detail/{{$post->id}}" class="stext-101 cl2 hov-cl1 trans-04 m-tb-10">
-											Continue Reading
-
-											<i class="fa fa-long-arrow-right m-l-9"></i>
-										</a>
-									</div>
-								</div>
+								<span class="stext-109 cl3 txt-center">
+									@php
+                                        echo date('M Y', strtotime($post->publication_date));
+                                    @endphp    
+								</span>
 							</div>
-						@endforeach
+						</div>
 
-						<!-- Pagination -->
-						<div class="flex-l-m flex-w w-full p-t-10 m-lr--7">
-							<a href="#" class="flex-c-m how-pagination1 trans-04 m-all-7 active-pagination1">
-								1
-							</a>
+						<div class="p-t-32">
+							<span class="flex-w flex-m stext-111 cl2 p-b-19">
+								<span>
+									<span class="cl4">By</span> {{$post->author}}  
+									<span class="cl12 m-l-4 m-r-6">|</span>
+								</span>
 
-							<a href="#" class="flex-c-m how-pagination1 trans-04 m-all-7">
-								2
-							</a>
+								<span>
+									@php
+                                        echo date('d M, Y',strtotime($post->publication_date));
+                                    @endphp    
+									<span class="cl12 m-l-4 m-r-6">|</span>
+								</span>
+
+								<span>
+									{{$post->tags}}  
+									<span class="cl12 m-l-4 m-r-6">|</span>
+								</span>
+
+								<span>
+									8 Comments
+								</span>
+							</span>
+
+							<h4 class="ltext-109 cl2 p-b-28">
+								{{$post->title}}
+							</h4>
+
+							<p class="stext-117 cl6 p-b-26">
+								{{$post->content}}
+							</p>							
+						</div>
+
+						<div class="flex-w flex-t p-t-16">
+							<span class="size-216 stext-116 cl8 p-t-4">
+								Tags
+							</span>
+
+							<div class="flex-w size-217">
+                                @php
+                                    $tags = explode(',',$post->tags);
+                                @endphp
+
+                                @foreach($tags as $tg)
+                                    <a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
+                                        {{$tg}}
+                                    </a>
+                                @endforeach
+							</div>
+						</div>
+
+						<!--  -->
+						<div class="p-t-40">
+							<h5 class="mtext-113 cl2 p-b-12">
+								Leave a Comment
+							</h5>
+
+							<p class="stext-107 cl6 p-b-40">
+								Your email address will not be published. Required fields are marked *
+							</p>
+
+							<form action="../post-comment" method="POST">
+                                @csrf
+								<div class="bor19 m-b-20">
+									<textarea class="stext-111 cl2 plh3 size-124 p-lr-18 p-tb-15" name="cmt" placeholder="Comment..." required></textarea>
+								</div>
+
+								<div class="bor19 size-218 m-b-20">
+									<input class="stext-111 cl2 plh3 size-116 p-lr-18" type="text" name="name" placeholder="Name *" required>
+								</div>
+
+								<div class="bor19 size-218 m-b-20">
+									<input class="stext-111 cl2 plh3 size-116 p-lr-18" type="text" name="email" placeholder="Email *" required>
+								</div>
+
+								<div class="bor19 size-218 m-b-30">
+									<input class="stext-111 cl2 plh3 size-116 p-lr-18" type="text" name="web" placeholder="Website">
+								</div>
+
+								<button class="flex-c-m stext-101 cl0 size-125 bg3 bor2 hov-btn3 p-lr-15 trans-04">
+									Post Comment
+								</button>
+							</form>
 						</div>
 					</div>
 				</div>
@@ -148,7 +192,7 @@
 							<ul>
 								<li class="flex-w flex-t p-b-30">
 									<a href="#" class="wrao-pic-w size-214 hov-ovelay1 m-r-20">
-										<img src="/e-commerce/resources/images/product-min-01.jpg" alt="PRODUCT">
+										<img src="images/product-min-01.jpg" alt="PRODUCT">
 									</a>
 
 									<div class="size-215 flex-col-t p-t-8">
@@ -164,7 +208,7 @@
 
 								<li class="flex-w flex-t p-b-30">
 									<a href="#" class="wrao-pic-w size-214 hov-ovelay1 m-r-20">
-										<img src="/e-commerce/resources/images/product-min-02.jpg" alt="PRODUCT">
+										<img src="images/product-min-02.jpg" alt="PRODUCT">
 									</a>
 
 									<div class="size-215 flex-col-t p-t-8">
@@ -180,7 +224,7 @@
 
 								<li class="flex-w flex-t p-b-30">
 									<a href="#" class="wrao-pic-w size-214 hov-ovelay1 m-r-20">
-										<img src="/e-commerce/resources/images/product-min-03.jpg" alt="PRODUCT">
+										<img src="images/product-min-03.jpg" alt="PRODUCT">
 									</a>
 
 									<div class="size-215 flex-col-t p-t-8">
@@ -331,6 +375,6 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section>	
 
 @endsection

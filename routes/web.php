@@ -8,6 +8,7 @@ use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ContactMessageController;
 use App\Http\Controllers\ShoppingController;
+use App\Http\Controllers\PostCommentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,3 +39,6 @@ Route::post('/contact-message', [ContactMessageController::class, 'addContactMes
 
 Route::get('/shopping', [ShoppingController::class, 'showCart']);
 
+Route::get('/blog-detail/{id}', [BlogController::class, 'showBlogDetail']);
+
+Route::post('/post-comment', [PostCommentController::class, 'addComment']);
