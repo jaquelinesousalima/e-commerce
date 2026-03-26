@@ -1,3 +1,32 @@
+# About e-Commerce
+
+Este é um e-commerce que obtive o design pronto e em cima disso montei o backend, ainda não finalizado.
+
+Criei o dockerfile, default.conf e o docker-compose.yml para criar imagens e subir containers para correr a aplicação.
+
+Para correr o projeto você deve:
+- Fazer clone dentre diretorio para dentro de uma distribuição Ubuntu no wsl.
+- Depois disso instalar o docker desktop na sua máquina.
+- Instalar o docker ce dentro da distribuição do Ubuntu.
+- Correr o comando <code>docker compose up -d</code> para criar imagens e subir os containers docker.
+
+- Instalar o composer e o npm dentro do container <i>application</i>:
+<code>docker compose exec application bash</code>
+<code>npm install</code>
+<code>composer install</code>
+
+- Dar permissão de acesso a pasta var/www ao container <i>application</i>:
+<code>docker compose exec application chown -R www-data storage</code>
+
+- Gerar a chave do artisan do Laravel no container <i>application</i>:
+<code>docker compose exec application php artisan key:generate</code>
+
+- Reiniciar o container <i>nginx</i>:
+<code>docker compose restart nginx</code>
+
+## TODO
+Contruir a imagem da base de dados MySql.
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
